@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gxr-Sb-37r">
+                                <rect key="frame" x="51" y="28" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.58463603779999995" green="0.89001736109999996" blue="0.7621906692" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="C2G-RL-EBC"/>
+                                    <constraint firstAttribute="height" constant="40" id="FQa-ek-geu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZKM-q2-DaM">
+                                <rect key="frame" x="51" y="122" width="50" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.93333333330000001" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acW-QF-1mg">
+                                <rect key="frame" x="51" y="76" width="84" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="old image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhA-Yo-v3G">
+                                <rect key="frame" x="51" y="170" width="75.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gxr-Sb-37r" firstAttribute="width" secondItem="ZKM-q2-DaM" secondAttribute="width" constant="150" id="3hN-11-aeg"/>
+                            <constraint firstAttribute="centerX" secondItem="ZKM-q2-DaM" secondAttribute="centerX" constant="84" id="A66-NH-Gjv"/>
+                            <constraint firstAttribute="centerY" secondItem="ZKM-q2-DaM" secondAttribute="centerY" constant="142" id="EGo-Fp-Tof"/>
+                            <constraint firstItem="Gxr-Sb-37r" firstAttribute="height" secondItem="ZKM-q2-DaM" secondAttribute="height" id="Ulo-7g-2pN"/>
+                            <constraint firstItem="KhA-Yo-v3G" firstAttribute="top" secondItem="ZKM-q2-DaM" secondAttribute="bottom" constant="8" id="Wdq-lv-048"/>
+                            <constraint firstItem="Gxr-Sb-37r" firstAttribute="leading" secondItem="acW-QF-1mg" secondAttribute="leading" id="dPj-zl-MMm"/>
+                            <constraint firstItem="KhA-Yo-v3G" firstAttribute="leading" secondItem="ZKM-q2-DaM" secondAttribute="leading" id="ig6-d0-F4k"/>
+                            <constraint firstAttribute="centerY" secondItem="Gxr-Sb-37r" secondAttribute="centerY" constant="236" id="jQ6-2v-hJY"/>
+                            <constraint firstAttribute="centerX" secondItem="Gxr-Sb-37r" secondAttribute="centerX" constant="9" id="na0-Lb-h5V"/>
+                            <constraint firstItem="acW-QF-1mg" firstAttribute="top" secondItem="Gxr-Sb-37r" secondAttribute="bottom" constant="8" id="pBa-5g-VhM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bigImageView" destination="Gxr-Sb-37r" id="RJi-cr-m4L"/>
+                        <outlet property="imageView2" destination="ZKM-q2-DaM" id="Bks-1Q-8Ym"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
