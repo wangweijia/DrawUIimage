@@ -10,59 +10,6 @@
 
 @implementation UIImage (UIImageCategory)
 
-//
-//+ (UIImage *)combine:(UIImage *)leftImage right:(UIImage *)rightImage {
-//    
-//    CGFloat width = leftImage.size.width * 2;
-//    CGFloat height = leftImage.size.height;
-//    CGSize offScreenSize = CGSizeMake(width, height);
-//    
-//    UIGraphicsBeginImageContext(offScreenSize);
-//    
-//    CGRect rect = CGRectMake(0, 0, width/2, height);
-//    [leftImage drawInRect:rect];
-//    
-//    rect.origin.x += width/2;
-//    [rightImage drawInRect:rect];
-//    
-//    UIImage* imagez = UIGraphicsGetImageFromCurrentImageContext();
-//    
-//    UIGraphicsEndImageContext();
-//    
-//    return imagez;
-//}
-//
-//+ (UIImage *)combine:(NSArray *)array{
-//    
-//    UIImage *aImage = array[0];
-//    
-//    CGFloat width = aImage.size.width * array.count;
-//    CGFloat height = aImage.size.height * 2;
-//    CGSize offScreenSize = CGSizeMake(width, height);
-//    
-//    UIGraphicsBeginImageContext(offScreenSize);
-//    
-//    CGFloat aw = aImage.size.width;
-//    CGFloat ah = aImage.size.height;
-//    
-//    CGRect rect = CGRectMake(0, 0, aw, ah);
-//    
-//    for (NSInteger i = 0; i < array.count; i++) {
-//        UIImage *aImagee = array[i];
-//        [aImagee drawInRect:rect];
-//        rect.origin.x += aw;
-//    }
-//    
-//    UIImage *aImagee = array[0];
-//    [aImagee drawInRect:CGRectMake(0, ah, aw, ah)];
-//    
-//    UIImage* imagez = UIGraphicsGetImageFromCurrentImageContext();
-//    
-//    UIGraphicsEndImageContext();
-//    
-//    return imagez;
-//}
-
 - (UIImage *)combineImageArray:(NSArray *)iArray frameArray:(NSArray *)fArray newImageSize:(CGSize)nSize{
     
     UIGraphicsBeginImageContext(nSize);
@@ -84,29 +31,6 @@
 }
 
 /*-------------------------切图------------------------------*/
-
-//+ (UIImage*)captureView:(UIView *)theView frame:(CGRect)fra{
-//    
-//    UIGraphicsBeginImageContext(theView.frame.size);
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    [theView.layer renderInContext:context];
-//    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    CGImageRef ref = CGImageCreateWithImageInRect(img.CGImage, fra);
-//    UIImage *i = [UIImage imageWithCGImage:ref];
-//    CGImageRelease(ref);
-//    return i;
-//    
-//}
-//
-//+ (UIImage*)createImageBy:(UIImage *)aImage frame:(CGRect)fra{
-//    
-//    CGImageRef ref = CGImageCreateWithImageInRect(aImage.CGImage, fra);
-//    UIImage *i = [UIImage imageWithCGImage:ref];
-//    CGImageRelease(ref);
-//    return i;
-//    
-//}
 
 - (UIImage *)captureImageByFrame:(NSArray *)array{
     
@@ -164,10 +88,16 @@
     
     NSArray *array17 = @[@(bigX),@(bigY),@(bigW),@(bigH)];
     
-    NSArray *tempArray = @[array1,array2,array3,array4,array5,array6,array7,array8,array9,
-                           array10,array11,array12,array13,array14,array15,array16,array17];
+    NSArray *tempArray = @[array1,array2,array3,array4,array5,array6,array7,array8,array9,array10,array11,array12,array13,array14,array15,array16,array17];
     
-    return tempArray;
+    NSMutableArray *imageArray = [NSMutableArray array];
+    for (NSArray *array in tempArray) {
+        if ([array[2] floatValue] > 0 && [array[3] floatValue] > 0) {
+            [imageArray addObject:array];
+        }
+    }
+    
+    return imageArray;
 }
 
 

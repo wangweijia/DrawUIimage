@@ -28,7 +28,7 @@
     _imageView2.image = left;
 
     CGRect big = CGRectMake(18, 8, 14, 24);
-    CGRect small = CGRectMake(20, 10, 10, 20);
+    CGRect small = CGRectMake(20, 8, 10, 24);
     CGSize bigSize = CGSizeMake(200, 40);
     
     self.bigImageView.image = [left resizableImageWithCapInsets:big smallInsets:small imageSize:bigSize];
