@@ -116,7 +116,6 @@
     UIImage *i = [UIImage imageWithCGImage:ref];
     CGImageRelease(ref);
     return i;
-    
 }
 
 - (NSArray *)createArray:(CGRect)bigF smallInsets:(CGRect)smallF imageSize:(CGSize)imageSize{
@@ -175,7 +174,8 @@
 //resizableImageWithCapInsets
 - (UIImage *)resizableImageWithCapInsets:(CGRect)bigF smallInsets:(CGRect)smallF imageSize:(CGSize)aSize{
     
-    CGFloat conefficient = CGImageGetHeight([self CGImage]) / self.size.height;
+    //获得缩放比例
+    CGFloat conefficient = [UIScreen mainScreen].scale;
     
     bigF.origin.x *= conefficient;
     bigF.origin.y *= conefficient;
