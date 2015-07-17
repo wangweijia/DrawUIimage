@@ -1,14 +1,26 @@
 //
-//  UIImage+UIImageCategory.m
+//  WJImage.m
 //  UIimage_expand
 //
-//  Created by apple on 6/26/15.
+//  Created by apple on 7/9/15.
 //  Copyright (c) 2015 com.eku001. All rights reserved.
 //
 
-#import "UIImage+UIImageCategory.h"
+#import "WJImage.h"
 
-@implementation UIImage (UIImageCategory)
+@implementation WJImage
+
++ (WJImage *)imageNamed:(NSString *)name{
+    WJImage *tmp = [[self alloc] initWithName:name];
+    return tmp;
+}
+
+- (id)initWithName:(NSString *)imgName{
+    if (self = [super initWithCGImage:[UIImage imageNamed:imgName].CGImage]) {
+        
+    }
+    return self;
+}
 
 - (UIImage *)combineImageArray:(NSArray *)iArray frameArray:(NSArray *)fArray newImageSize:(CGSize)nSize{
     
@@ -20,7 +32,7 @@
         
         UIImage *aImagee = iArray[i];
         CGRect rect = CGRectMake([aArray[0] floatValue], [aArray[1] floatValue], [aArray[2] floatValue], [aArray[3] floatValue]);
-            [aImagee drawInRect:rect];
+        [aImagee drawInRect:rect];
     }
     
     UIImage* imagez = UIGraphicsGetImageFromCurrentImageContext();
@@ -29,8 +41,6 @@
     
     return imagez;
 }
-
-/*-------------------------切图------------------------------*/
 
 - (UIImage *)captureImageByFrame:(NSArray *)array{
     
@@ -102,7 +112,7 @@
 
 
 //resizableImageWithCapInsets
-- (UIImage *)resizableImageWithCapInsets:(CGRect)bigF smallInsets:(CGRect)smallF imageSize:(CGSize)aSize{
+- (UIImage *)resizableImageWithCapRange:(CGRect)bigF smallRange:(CGRect)smallF newSize:(CGSize)nSize{
     
     //获得缩放比例
     CGFloat conefficient = [UIScreen mainScreen].scale;
@@ -117,15 +127,15 @@
     smallF.size.height *= conefficient;
     smallF.size.width *= conefficient;
     
-    aSize.height *= conefficient;
-    aSize.width *= conefficient;
+    nSize.height *= conefficient;
+    nSize.width *= conefficient;
     
     CGSize imageSize = self.size;
     imageSize.width *= conefficient;
     imageSize.height *= conefficient;
     
-    CGFloat heighProportion = (aSize.height - imageSize.height);
-    CGFloat widthProportion = (aSize.width - imageSize.width);
+    CGFloat heighProportion = (nSize.height - imageSize.height);
+    CGFloat widthProportion = (nSize.width - imageSize.width);
     
     
     CGRect cBigF = bigF;
@@ -137,7 +147,7 @@
     cSmallF.origin.y = smallF.origin.y + heighProportion / 2;
     
     NSArray *OldArray = [self createArray:bigF smallInsets:smallF imageSize:imageSize];
-    NSArray *NewArray = [self createArray:cBigF smallInsets:cSmallF imageSize:aSize];
+    NSArray *NewArray = [self createArray:cBigF smallInsets:cSmallF imageSize:nSize];
     
     NSMutableArray *UIImageArray = [NSMutableArray array];
     
@@ -147,10 +157,63 @@
         [UIImageArray addObject:aImage];
     }
     
-    UIImage *newImage = [self combineImageArray:UIImageArray frameArray:NewArray newImageSize:aSize];
+    UIImage *newImage = [self combineImageArray:UIImageArray frameArray:NewArray newImageSize:nSize];
     
     return newImage;
 }
 
+- (UIImage *)resizableImageWithNewSize:(CGSize)nSize{
+    //获得缩放比例
+    CGFloat conefficient = [UIScreen mainScreen].scale;
+    
+    _bigRange.origin.x *= conefficient;
+    _bigRange.origin.y *= conefficient;
+    _bigRange.size.width *= conefficient;
+    _bigRange.size.height *= conefficient;
+    
+    _smallRange.origin.x *= conefficient;
+    _smallRange.origin.y *= conefficient;
+    _smallRange.size.width *= conefficient;
+    _smallRange.size.height *= conefficient;
+    
+    nSize.height *= conefficient;
+    nSize.width *= conefficient;
+    
+    CGSize imageSize = self.size;
+//    imageSize.width *= conefficient;
+//    imageSize.height *= conefficient;
+    
+    CGFloat heighProportion = (nSize.height - imageSize.height);
+    CGFloat widthProportion = (nSize.width - imageSize.width);
+    
+    CGRect cBigF = _bigRange;
+    cBigF.size.width = _bigRange.size.width + widthProportion;
+    cBigF.size.height = _bigRange.size.height + heighProportion;
+    
+    CGRect cSmallF = _smallRange;
+    cSmallF.origin.x = _smallRange.origin.x + widthProportion / 2;
+    cSmallF.origin.y = _smallRange.origin.y + heighProportion / 2;
+    
+    NSArray *OldArray = [self createArray:_bigRange smallInsets:_smallRange imageSize:imageSize];
+    NSArray *NewArray = [self createArray:cBigF smallInsets:cSmallF imageSize:nSize];
+    
+    NSMutableArray *UIImageArray = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < OldArray.count; i++) {
+        UIImage *aImage = [self captureImageByFrame:OldArray[i]];
+        
+        [UIImageArray addObject:aImage];
+    }
+    
+    UIImage *newImage = [self combineImageArray:UIImageArray frameArray:NewArray newImageSize:nSize];
+    
+    return newImage;
+}
+
+- (WJImage *)resizableImageWithCapRange:(CGRect)bigF smallRange:(CGRect)smallF{
+    self.bigRange = bigF;
+    self.smallRange = smallF;
+    return self;
+}
 
 @end

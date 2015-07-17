@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		182FF34D1B4054BD00FB6917 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182FF34C1B4054BD00FB6917 /* Images.xcassets */; };
+		1832C2221B4E26820072AE39 /* WJImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832C2211B4E26820072AE39 /* WJImageView.m */; };
+		1832C2251B4E26A60072AE39 /* WJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832C2241B4E26A60072AE39 /* WJImage.m */; };
 		183410991B3D703F009DAD46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 183410981B3D703F009DAD46 /* main.m */; };
 		1834109C1B3D703F009DAD46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834109B1B3D703F009DAD46 /* AppDelegate.m */; };
 		1834109F1B3D703F009DAD46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1834109E1B3D703F009DAD46 /* ViewController.m */; };
 		183410A21B3D703F009DAD46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183410A01B3D703F009DAD46 /* Main.storyboard */; };
 		183410A71B3D703F009DAD46 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183410A51B3D703F009DAD46 /* LaunchScreen.xib */; };
 		183410B31B3D703F009DAD46 /* UIimage_expandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 183410B21B3D703F009DAD46 /* UIimage_expandTests.m */; };
-		183410BE1B3D7135009DAD46 /* UIImage+UIImageCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 183410BD1B3D7135009DAD46 /* UIImage+UIImageCategory.m */; };
 		183410C41B3D750D009DAD46 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183410C31B3D750D009DAD46 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		182FF34C1B4054BD00FB6917 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1832C2201B4E26820072AE39 /* WJImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJImageView.h; sourceTree = "<group>"; };
+		1832C2211B4E26820072AE39 /* WJImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJImageView.m; sourceTree = "<group>"; };
+		1832C2231B4E26A60072AE39 /* WJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJImage.h; sourceTree = "<group>"; };
+		1832C2241B4E26A60072AE39 /* WJImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJImage.m; sourceTree = "<group>"; };
 		183410931B3D703F009DAD46 /* UIimage_expand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIimage_expand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183410971B3D703F009DAD46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183410981B3D703F009DAD46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,8 +47,6 @@
 		183410AC1B3D703F009DAD46 /* UIimage_expandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIimage_expandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		183410B11B3D703F009DAD46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183410B21B3D703F009DAD46 /* UIimage_expandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIimage_expandTests.m; sourceTree = "<group>"; };
-		183410BC1B3D7135009DAD46 /* UIImage+UIImageCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageCategory.h"; sourceTree = "<group>"; };
-		183410BD1B3D7135009DAD46 /* UIImage+UIImageCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageCategory.m"; sourceTree = "<group>"; };
 		183410C31B3D750D009DAD46 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -95,8 +98,10 @@
 				183410A01B3D703F009DAD46 /* Main.storyboard */,
 				183410A51B3D703F009DAD46 /* LaunchScreen.xib */,
 				183410961B3D703F009DAD46 /* Supporting Files */,
-				183410BC1B3D7135009DAD46 /* UIImage+UIImageCategory.h */,
-				183410BD1B3D7135009DAD46 /* UIImage+UIImageCategory.m */,
+				1832C2201B4E26820072AE39 /* WJImageView.h */,
+				1832C2211B4E26820072AE39 /* WJImageView.m */,
+				1832C2231B4E26A60072AE39 /* WJImage.h */,
+				1832C2241B4E26A60072AE39 /* WJImage.m */,
 				182FF34C1B4054BD00FB6917 /* Images.xcassets */,
 			);
 			path = UIimage_expand;
@@ -230,8 +235,9 @@
 			files = (
 				1834109F1B3D703F009DAD46 /* ViewController.m in Sources */,
 				1834109C1B3D703F009DAD46 /* AppDelegate.m in Sources */,
+				1832C2221B4E26820072AE39 /* WJImageView.m in Sources */,
+				1832C2251B4E26A60072AE39 /* WJImage.m in Sources */,
 				183410991B3D703F009DAD46 /* main.m in Sources */,
-				183410BE1B3D7135009DAD46 /* UIImage+UIImageCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
