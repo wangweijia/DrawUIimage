@@ -16,6 +16,11 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView2;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView3;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView4;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView5;
 
 @end
 
@@ -29,10 +34,16 @@
     
     WJImage *right = [WJImage imageNamed:@"home_newreply_btn_nor"];
     
-    CGRect big = CGRectMake(18, 8, 14, 24);
-    CGRect small = CGRectMake(20, 8, 10, 24);
+    CGRect big = CGRectMake(16, 8, 18, 24);
+    CGRect small = CGRectMake(21, 8, 8, 24);
     
     _bigImageView.wjImage = [right resizableImageWithCapRange:big smallRange:small];
+    
+    _imageView3.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) range:CGSizeMake(70, 0)];
+    
+//    _imageView4.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) padding:UIEdgeInsetsMake(0, 150, 0, 0)];
+    
+//    _imageView5.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) padding:UIEdgeInsetsMake(0, 200, 0, 0)];
 }
 
 - (void)didReceiveMemoryWarning {

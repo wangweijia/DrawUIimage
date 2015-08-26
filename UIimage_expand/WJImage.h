@@ -18,6 +18,8 @@
 
 - (UIImage *)resizableImageWithCapRange:(CGRect)bigF smallRange:(CGRect)smallF newSize:(CGSize)nSize;
 
+- (UIImage *)resizableImageWithCapRange:(CGRect)bigF smallRange:(CGRect)smallF newSize:(CGSize)nSize range:(CGSize)range;
+
 - (UIImage *)resizableImageWithNewSize:(CGSize)nSize;
 
 - (WJImage *)resizableImageWithCapRange:(CGRect)bigF smallRange:(CGRect)smallF;

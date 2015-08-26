@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.93333333330000001" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acW-QF-1mg">
-                                <rect key="frame" x="51" y="76" width="84" height="20.5"/>
+                                <rect key="frame" x="51" y="76" width="83.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,25 +40,58 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S6V-su-I8S">
+                                <rect key="frame" x="60" y="212" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2N2-ov-BES"/>
+                                    <constraint firstAttribute="height" constant="40" id="HDZ-Xp-WAX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2P-qM-UUA">
+                                <rect key="frame" x="60" y="294" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mcq-qJ-aMm"/>
+                                    <constraint firstAttribute="width" constant="200" id="Xvf-5I-w3t"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFl-Ii-bTa">
+                                <rect key="frame" x="60" y="366" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Hqi-QB-Ww0"/>
+                                    <constraint firstAttribute="height" constant="40" id="VkS-NS-Imq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Gxr-Sb-37r" firstAttribute="width" secondItem="ZKM-q2-DaM" secondAttribute="width" constant="150" id="3hN-11-aeg"/>
+                            <constraint firstAttribute="centerX" secondItem="xFl-Ii-bTa" secondAttribute="centerX" id="7Bt-aJ-Mls"/>
                             <constraint firstAttribute="centerX" secondItem="ZKM-q2-DaM" secondAttribute="centerX" constant="84" id="A66-NH-Gjv"/>
+                            <constraint firstAttribute="centerY" secondItem="h2P-qM-UUA" secondAttribute="centerY" constant="-30" id="Bip-Xc-kS4"/>
                             <constraint firstAttribute="centerY" secondItem="ZKM-q2-DaM" secondAttribute="centerY" constant="142" id="EGo-Fp-Tof"/>
+                            <constraint firstAttribute="centerY" secondItem="S6V-su-I8S" secondAttribute="centerY" constant="52" id="SSj-J1-Fib"/>
                             <constraint firstItem="Gxr-Sb-37r" firstAttribute="height" secondItem="ZKM-q2-DaM" secondAttribute="height" id="Ulo-7g-2pN"/>
                             <constraint firstItem="KhA-Yo-v3G" firstAttribute="top" secondItem="ZKM-q2-DaM" secondAttribute="bottom" constant="8" id="Wdq-lv-048"/>
                             <constraint firstItem="Gxr-Sb-37r" firstAttribute="leading" secondItem="acW-QF-1mg" secondAttribute="leading" id="dPj-zl-MMm"/>
+                            <constraint firstAttribute="centerX" secondItem="S6V-su-I8S" secondAttribute="centerX" id="ex2-r1-Ara"/>
+                            <constraint firstAttribute="centerY" secondItem="xFl-Ii-bTa" secondAttribute="centerY" constant="-102" id="gnD-w6-Rm3"/>
                             <constraint firstItem="KhA-Yo-v3G" firstAttribute="leading" secondItem="ZKM-q2-DaM" secondAttribute="leading" id="ig6-d0-F4k"/>
                             <constraint firstAttribute="centerY" secondItem="Gxr-Sb-37r" secondAttribute="centerY" constant="236" id="jQ6-2v-hJY"/>
                             <constraint firstAttribute="centerX" secondItem="Gxr-Sb-37r" secondAttribute="centerX" constant="9" id="na0-Lb-h5V"/>
                             <constraint firstItem="acW-QF-1mg" firstAttribute="top" secondItem="Gxr-Sb-37r" secondAttribute="bottom" constant="8" id="pBa-5g-VhM"/>
+                            <constraint firstAttribute="centerX" secondItem="h2P-qM-UUA" secondAttribute="centerX" id="z96-gD-xz5"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="bigImageView" destination="Gxr-Sb-37r" id="RJi-cr-m4L"/>
                         <outlet property="imageView2" destination="ZKM-q2-DaM" id="Bks-1Q-8Ym"/>
+                        <outlet property="imageView3" destination="S6V-su-I8S" id="3Yf-ca-SfG"/>
+                        <outlet property="imageView4" destination="h2P-qM-UUA" id="v9V-fp-8p9"/>
+                        <outlet property="imageView5" destination="xFl-Ii-bTa" id="fIO-e1-3Yy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
