@@ -1,5 +1,5 @@
 # DrawUIimage
-![](Screenshots/ex01.png)
+![](Screenshots/ex02.png)
 
 CGRect big = CGRectMake(18, 8, 14, 24);
 

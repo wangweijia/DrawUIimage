@@ -41,9 +41,9 @@
     
     _imageView3.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) range:CGSizeMake(70, 0)];
     
-//    _imageView4.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) padding:UIEdgeInsetsMake(0, 150, 0, 0)];
+    _imageView4.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) range:CGSizeMake(160, 0)];
     
-//    _imageView5.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) padding:UIEdgeInsetsMake(0, 200, 0, 0)];
+    _imageView5.image = [right resizableImageWithCapRange:big smallRange:small newSize:CGSizeMake(200.0, 40.0) range:CGSizeMake(175, 0)];
 }
 
 - (void)didReceiveMemoryWarning {
