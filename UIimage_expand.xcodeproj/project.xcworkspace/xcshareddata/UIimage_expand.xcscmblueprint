@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4C2C224578E7670A26748695A03541AC8C93D523",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B46096506ACB9B7AFD71FF588CFB3F782077FCFE" : 0,
+    "4C2C224578E7670A26748695A03541AC8C93D523" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "ED2E5211-4973-4939-9B0E-BA42064F4E1C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B46096506ACB9B7AFD71FF588CFB3F782077FCFE" : "",
+    "4C2C224578E7670A26748695A03541AC8C93D523" : "UIimage_expand"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "UIimage_expand",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "UIimage_expand.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wangweijia\/DrawUIimage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4C2C224578E7670A26748695A03541AC8C93D523"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wangweijia\/Bottonprompt.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B46096506ACB9B7AFD71FF588CFB3F782077FCFE"
+    }
+  ]
+}

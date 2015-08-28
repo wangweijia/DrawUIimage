@@ -129,7 +129,7 @@
     NSArray *array1  = @[@(0),@(0),@(bigX),@(bigY)];
     
     NSArray *array2;
-    if (differW > range.width) {
+    if (differW > range.width && range.width > 0) {
         array2  = @[@([array1[0] floatValue]+[array1[2] floatValue]),array1[1],@(range.width),array1[3]];
     }else{
         array2  = @[@([array1[0] floatValue]+[array1[2] floatValue]),array1[1],@(smallX-bigX),array1[3]];
@@ -138,7 +138,7 @@
     NSArray *array3  = @[@([array2[0] floatValue]+[array2[2] floatValue]),array1[1],@(smallW),array1[3]];
     
     NSArray *array4;
-    if (differW > range.width) {
+    if (differW > range.width && range.width > 0) {
         array4  = @[@([array3[0] floatValue]+[array3[2] floatValue]),array1[1],@(differW - range.width),array1[3]];
     }else{
         array4  = @[@([array3[0] floatValue]+[array3[2] floatValue]),array1[1],@(bigX+bigW-smallX-smallW),array1[3]];
@@ -147,7 +147,7 @@
     NSArray *array5  = @[@([array4[0] floatValue]+[array4[2] floatValue]),array1[1],@(imageSize.width-bigX-bigW),array1[3]];
     
     NSArray *array6;
-    if (differH > range.height) {
+    if (differH > range.height && range.height > 0) {
         array6  = @[array5[0],@([array5[3] floatValue]+[array5[1] floatValue]),array5[2],@(range.height)];
     }else{
         array6  = @[array5[0],@([array5[3] floatValue]+[array5[1] floatValue]),array5[2],@(smallY-bigY)];
@@ -156,7 +156,7 @@
     NSArray *array7  = @[array5[0],@([array6[3] floatValue]+[array6[1] floatValue]),array5[2],@(smallH)];
     
     NSArray *array8;
-    if (differH > range.height) {
+    if (differH > range.height && range.height > 0) {
         array8  = @[array5[0],@([array7[3] floatValue]+[array7[1] floatValue]),array5[2],@(differH - range.height)];
     }else{
         array8  = @[array5[0],@([array7[3] floatValue]+[array7[1] floatValue]),array5[2],@(bigH+bigY-smallH-smallY)];
@@ -183,10 +183,14 @@
     NSArray *tempArray = @[array1,array2,array3,array4,array5,array6,array7,array8,array9,array10,array11,array12,array13,array14,array15,array16,array17];
     
     NSMutableArray *imageArray = [NSMutableArray array];
+    NSInteger i = 0;
     for (NSArray *array in tempArray) {
         if ([array[2] floatValue] > 0 && [array[3] floatValue] > 0) {
             [imageArray addObject:array];
+        }else{
+            NSLog(@"waring,%@",@(i));
         }
+        i ++;
     }
     
     return imageArray;
